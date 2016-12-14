@@ -777,12 +777,6 @@ class Terminal(Gtk.VBox):
 
         if self.config['scrollbar_position'] in ['disabled', 'hidden']:
             self.scrollbar.hide()
-        else:
-            self.scrollbar.show()
-            if self.config['scrollbar_position'] == 'left':
-                self.terminalbox.reorder_child(self.scrollbar, 0)
-            elif self.config['scrollbar_position'] == 'right':
-                self.terminalbox.reorder_child(self.vte, 0)
 
         self.vte.set_rewrap_on_resize(self.config['rewrap_on_resize'])
 
